@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
+import { firebase } from '../../firebase/config'
+
 
 export default function LoginScreen({navigation}) {
     const [email, setEmail] = useState('')
@@ -9,6 +11,10 @@ export default function LoginScreen({navigation}) {
 
     const onFooterLinkPress = () => {
         navigation.navigate('Registration')
+    }
+
+    const visitHome = () => {
+        navigation.navigate('Home')
     }
 
     const onLoginPress = () => {
@@ -27,7 +33,7 @@ export default function LoginScreen({navigation}) {
                             return;
                         }
                         const user = firestoreDocument.data()
-                        navigation.navigate('Home', {user})
+                        navigation.navigate('Home');
                     })
                     .catch(error => {
                         alert(error)
