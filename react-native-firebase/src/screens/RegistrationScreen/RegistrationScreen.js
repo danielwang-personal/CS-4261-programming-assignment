@@ -98,7 +98,7 @@ export default function RegistrationScreen({navigation}) {
                     <Text style={styles.buttonTitle}>Create account</Text>
                 </TouchableOpacity>
                 <View style={styles.footerView}>
-                    <Text style={styles.footerText}>Already got an account? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Log in</Text></Text>
+                    <Text style={styles.footerText}>Already got an account? What are you doing here? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Log in, instead.</Text></Text>
                 </View>
             </KeyboardAwareScrollView>
         </View>
